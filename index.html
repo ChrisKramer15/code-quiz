@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Code or Bust</title>
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-    
-    
-    <script src="./assets/script.js"></script>
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>CODE OR BUST!!!</h1>
+      </header>
+      <div>
+        <span id="timer">
+          <span id="time">Timer: 100</span>
+        </span>
+      </div>
+
+      <div class="visibility" id="questionContain">
+        <div id="question">
+          <p>What language changes webpage styles?</p>
+        </div>
+
+        <div id="answers" class="btn-grid">
+          <div class="row">
+            <button id="choiceA" class="btn" onclick="checkAnswer('A')">
+              HTML
+            </button>
+            <button id="choiceB" class="btn" onclick="checkAnswer('B')">
+              CSS
+            </button>
+          </div>
+          <div class="row">
+            <button id="choiceC" class="btn" onclick="checkAnswer('C')">
+              ExpressJS
+            </button>
+            <button id="choiceD" class="btn" onclick="checkAnswer('D')">
+              mongoDB
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="begin-btn" class="begin-btn btn">Try your luck!</button>
+        <!-- <button id="next-btn" class="next-btn btn">Next Question</button> -->
+      </div>
+      <div id="scores">High Scores:</div>
+    </div>
+  </body>
+
+  <script src="./assets/script.js"></script>
 </html>
